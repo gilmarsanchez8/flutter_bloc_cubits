@@ -14,6 +14,10 @@ final appRouter = GoRouter(
     GoRoute(
       path: '/bloc',
       builder: (context, state) => BlocCounterScreen(),
+    ),
+    GoRoute(
+      path: '/new-user',
+      builder: (context, state) => RegisterScreen(),
     )
   ],
 );
