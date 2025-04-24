@@ -7,6 +7,7 @@ class CustomTextFormField extends StatelessWidget {
   final Function(String)? onChanged;
   final String? Function(String?)? validator;
   final bool obscureText;
+  final Widget? icon;
   const CustomTextFormField({
     super.key,
     this.label,
@@ -15,6 +16,7 @@ class CustomTextFormField extends StatelessWidget {
     this.onChanged,
     this.validator,
     this.obscureText = false,
+    this.icon,
   });
 
   @override
@@ -36,10 +38,7 @@ class CustomTextFormField extends StatelessWidget {
         label: label != null ? Text(label!) : null,
         hintText: hint,
         focusColor: colors.primary,
-        prefixIcon: Icon(
-          Icons.supervised_user_circle_outlined,
-          color: colors.primary,
-        ),
+        prefixIcon: icon,
         errorText: errorMessage,
         errorBorder: border.copyWith(
           borderSide: BorderSide(
